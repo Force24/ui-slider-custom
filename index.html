@@ -11,8 +11,8 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<form action="" class="col-md-10 offset-md-1">
+		<div class="row calcSliders">
+			<form action="" method="post" class="CalcReturn col-md-10 offset-md-1">
 				<div class="row large-gutters">
 					<div class="col-lg-6">
 						<input type="hidden" name="employees">
@@ -21,7 +21,7 @@
 							<div class="slider">
 								<div class="ui-slider-handle custom-handle"></div>
 								<span class="min-range">0</span>
-								<span class="max-range">100+</span>
+								<span class="max-range">250+</span>
 							</div>
 						</div>
 					</div>
@@ -37,10 +37,28 @@
 						</div>
 					</div>
 					<div class="col-lg-6 offset-lg-3">
-						<input type="submit" value="calculate your estimated return on investment">
+						<button type="submit">calculate your estimated return on investment</button>
 					</div>
 				</div>
 			</form>
+		</div>
+		<div class="row calcResults">
+			<div class="col-md-10 offset-md-1">
+				<div class="row">
+					<div class="card">
+						<h5>YOUR TOTAL REACH</h5>
+						<p>+ <span id="calcReach">150,000</span></p>
+					</div>
+					<div class="card">
+						<h5>YOUR ROI</h5>
+						<p>+ <span id="calcROI">140</span>%</p>
+					</div>
+					<div class="card">
+						<h5>PAID SEARCH COST P.A.</h5>
+						<p>- £<span id="calcPSC">30,000</span></p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
