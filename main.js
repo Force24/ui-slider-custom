@@ -66,7 +66,7 @@
                     package = 2250
                 }
                 clicks = (reach/100)*2;
-                roi = ((clicks - package)/package) * 100
+                roi = ((clicks)/package) * 100
                 $('#calcReach').html(formatNumber(reach));
                 $('#calcROI').html(Math.round(roi));
                 $('#calcPSC').html(formatNumber(clicks * 12));
