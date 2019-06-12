@@ -10,57 +10,58 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-	<div class="container">
-		<div class="row calcSliders">
-			<form action="" method="post" class="CalcReturn col-md-10 offset-md-1">
-				<div class="row large-gutters">
-					<div class="col-lg-6">
-						<input type="hidden" name="employees" value="125">
-						<h5>SIZE OF YOUR TEAM</h5>
-						<div class="slider-container">
-							<div class="slider">
-								<div class="ui-slider-handle custom-handle"></div>
-								<span class="min-range">0</span>
-								<span class="max-range">250+</span>
+		<div class="container">
+				<div class="row calcSliders">
+					<form action="" method="post" class="CalcReturn col-md-10 offset-md-1">
+						<input type="hidden" value="VISITOR INFO EMAIL">
+						<div class="row large-gutters">
+							<div class="col-lg-6">
+								<input type="hidden" name="employees" value="125">
+								<h5>SIZE OF YOUR TEAM</h5>
+								<div class="slider-container">
+									<div class="slider">
+										<div class="ui-slider-handle custom-handle"></div>
+										<span class="min-range">0</span>
+										<span class="max-range">250+</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<h5>YOUR ONLINE FOLLOWERS</h5>
+								<input type="hidden" name="followers" value="25000">
+								<div class="slider-container">
+									<div class="slider-2">
+										<div class="ui-slider-handle custom-handle-2"></div>
+										<span class="min-range">0</span>
+										<span class="max-range">50k+</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 offset-lg-3">
+								<button type="submit">calculate your estimated return on investment</button>
 							</div>
 						</div>
-					</div>
-					<div class="col-lg-6">
-						<h5>YOUR ONLINE FOLLOWERS</h5>
-						<input type="hidden" name="followers" value="25000">
-						<div class="slider-container">
-							<div class="slider-2">
-								<div class="ui-slider-handle custom-handle-2"></div>
-								<span class="min-range">0</span>
-								<span class="max-range">50k+</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 offset-lg-3">
-						<button type="submit">calculate your estimated return on investment</button>
-					</div>
+					</form>
 				</div>
-			</form>
-		</div>
-		<div class="row calcResults">
-			<div class="col-md-10 offset-md-1">
-				<div class="row">
-					<div class="card">
-						<h5>YOUR TOTAL REACH</h5>
-						<p>+ <span id="calcReach">150,000</span></p>
-					</div>
-					<div class="card">
-						<h5>YOUR ROI</h5>
-						<p>+ <span id="calcROI">240</span>%</p>
-					</div>
-					<div class="card">
-						<h5>PAID SEARCH COST P.A.</h5>
-						<p>- £<span id="calcPSC">36,000</span></p>
+				<div class="row calcResults">
+					<div class="col-md-10 offset-md-1">
+						<div class="row">
+							<div class="card">
+								<h5>YOUR TOTAL REACH</h5>
+								<p>+ <span id="calcReach">150,000</span></p>
+							</div>
+							<div class="card">
+								<h5>YOUR ROI</h5>
+								<p>+ <span id="calcROI">240</span>%</p>
+							</div>
+							<div class="card">
+								<h5>PAID SEARCH COST P.A.</h5>
+								<p>- £<span id="calcPSC">36,000</span></p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="main.js"></script>

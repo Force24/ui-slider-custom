@@ -1,6 +1,7 @@
 ﻿$( function() {
     var handle = $( ".custom-handle" );
     var handle2 = $( ".custom-handle-2" );
+    var frm = $('.CalcReturn');
     $( ".slider" ).slider({
         min: 0,
         max: 250,
@@ -8,6 +9,9 @@
         animate:"slow",
         create: function() {
             handle.text( $( this ).slider( "value" ) );
+        },
+        change: function( event, ui ) {
+            frm.submit();
         },
         slide: function( event, ui ) {
             handle.text( ui.value );
@@ -23,12 +27,17 @@
         create: function() {
             handle2.text( "25k" );
         },
+        change: function( event, ui ) {
+            handle2.text( ui.value / 1000 + "k" );
+            $('input[name=followers]').val(ui.value);
+            frm.submit();
+        },
         slide: function( event, ui ) {
             handle2.text( ui.value / 1000 + "k" );
             $('input[name=followers]').val(ui.value);
         }
     });
-    var frm = $('.CalcReturn');
+    
     frm.submit(function (e) {
         $.ajax({
             type: frm.attr('method'),
