@@ -11,7 +11,9 @@
             handle.text( $( this ).slider( "value" ) );
         },
         change: function( event, ui ) {
+            handle.text( ui.value );
             frm.submit();
+            $('input[name=employees]').val(ui.value);
         },
         slide: function( event, ui ) {
             handle.text( ui.value );
@@ -40,7 +42,7 @@
     
     frm.submit(function (e) {
         $.ajax({
-            type: frm.attr('method'),
+            type: "GET",
             url: frm.attr('action'),
             data: frm.serialize(),
             success: function (data) {
